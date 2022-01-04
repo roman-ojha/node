@@ -5,7 +5,7 @@
         -> Request Headers{
             Request-URL:http://localhost:8080/video
             Request Method:GET
-            Range:bytes = 0-
+            Range:bytes 0-
         }
         -> here we are requesting a get method from the starting position of the byte which is 0 byte
     -> now server will response the request by sending the part of the video and with status code '206' =  Partial Content and response header will send:
@@ -23,6 +23,9 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
+const cors = require("cors");
+
+app.use(cors({ credentials: true }));
 
 // app.get("/", function (req, res) {
 //   res.sendFile(__dirname + "/template/index.html");
@@ -78,6 +81,7 @@ app.get("/video", function (req, res) {
   //   'createReadStream(<FielPath>,<starting bytes - end bytes to read>)
 
   videoStream.pipe(res);
+  // so we get the videoStream and then it's got a variable by itself d'esn't really do anything so we have to pipe this stream somewhere and we pipe throught this response object
 
   //   Cons: the problem of this approche is that the server and the video palyer will now work vary well so it will just request that ever part of the video we are on, and doesn't really considerd about or take into accout what you've already requested
 
