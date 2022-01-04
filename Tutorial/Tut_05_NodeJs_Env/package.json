@@ -1,0 +1,21 @@
+{
+  "name": "tut_05_nodejs_env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "env-cmd -f .env.production node src/index.js",
+    "dev": "env-cmd -f .env.development nodemon src/index.js",
+    "cstart": "cross-env NODE_ENV=production node src/index.js",
+    "cdev": "cross-env NODE_ENV=development nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.2"
+  }
+}

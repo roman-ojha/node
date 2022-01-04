@@ -1,0 +1,38 @@
+GET http://localhost:8080/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUm9tYW4iLCJpYXQiOjE2NDA1ODMzMjcsImV4cCI6MTY0MDU4MzMyN30.z8TfaQ2LeL4Fh8EI0QcNaTET13enrX3Z9jzcetuODqk
+
+###
+
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "username":"Roman"
+}
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username":"Roman"
+}
+
+###
+
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUm9tYW4iLCJpYXQiOjE2NDA1ODM4MjN9.TLwVRt65bL4tQOlsH_qa8MQd9NuJeDt2fyR9a2I_0oU"
+}
+
+###
+
+DELETE  http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUm9tYW4iLCJpYXQiOjE2NDA1ODM4MjN9.TLwVRt65bL4tQOlsH_qa8MQd9NuJeDt2fyR9a2I_0oU"
+}

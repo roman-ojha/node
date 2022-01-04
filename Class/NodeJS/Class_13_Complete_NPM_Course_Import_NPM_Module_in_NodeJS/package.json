@@ -1,0 +1,15 @@
+{
+  "name": "class_13_complete_npm_course_import_npm_module_in_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roman Ojha",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "validator": "^13.6.0"
+  }
+}

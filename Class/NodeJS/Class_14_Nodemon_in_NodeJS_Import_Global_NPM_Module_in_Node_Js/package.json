@@ -1,0 +1,11 @@
+{
+  "name": "class_14_nodemon_in_nodejs_import_global_npm_module_in_node_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roman Ojha",
+  "license": "ISC"
+}
