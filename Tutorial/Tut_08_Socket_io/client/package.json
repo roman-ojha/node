@@ -4,12 +4,16 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "snowpack dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "socket.io-client": "^4.4.1"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.8"
   }
 }
