@@ -1,0 +1,7 @@
+*) Yarn:
+    -> yarn install
+        -> to install all dependencies
+    -> yarn add <package_name>
+        -> to install package
+    -> yarn start
+        -> to start to project according to script on package.json
