@@ -7,7 +7,7 @@ import path from "path";
 const router = express.Router();
 const __dirname = path.resolve();
 
-const adminEmail = "razzroman99@gmail.com";
+const adminEmail = process.env.ADMIN_EMAIL;
 
 const transporter = nodemailer.createTransport({
   // here we have to given the admin email and pass to varify
@@ -55,7 +55,6 @@ router.post("/register", async (req, res) => {
               console.log(err);
               return;
             }
-            console.log(info.response);
           });
         }
       );
@@ -77,7 +76,6 @@ router.get("/confirmation/:token", async (req, res) => {
     const userIndex = userData.findIndex((user) => user.email === userEmail);
     // we will find the user and set conformed = true in database
     userData[userIndex].conformed = true;
-    console.log(userData[userIndex]);
     if (userData[userIndex].conformed) {
       res.send(`<h1>Email: ${userEmail}</h1>`);
     } else {
