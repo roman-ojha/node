@@ -4,6 +4,8 @@
         -> https://myaccount.google.com/lesssecureapps
     -> for 10 minute email:
         -> https://10minutemail.com/
+    -> npm i nodemailer
+    -> https://nodemailer.com/message/
 */
 import dotenv from "dotenv";
 dotenv.config();

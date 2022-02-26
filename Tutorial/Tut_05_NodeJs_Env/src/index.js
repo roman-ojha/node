@@ -1,6 +1,6 @@
 // NOTE: if we are running the app from the root directory and using npm start or npm dev then we have config like this:
 // require("dotenv").config();
-// here we are oppening all the variable at the first so that if toher file need's it then it can access the env easily
+// here we are oppening all the variable at the first so that if other file need's it then it can access the env easily
 
 // require("dotenv").config({path :""});
 // if we want to add path of the variable
