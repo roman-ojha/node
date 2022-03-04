@@ -12,3 +12,34 @@
 *) npm:
     -> npm install -g <package_name>
         -> to install package globally
+    -> npm install --save-dev <package_name> (to install package as the dev dependencies)
+    -> npm view <package_name> (to see about package)
+    -> npm view <package_name> version (to see the version of that package)
+    -> npm install <package_name>@<version_number> (to install spacific version of package)
+    -> npm list <package_name> (to know the specific latest version of an installed package)
+    -> Prefix a version number with a caret (^) or a tilde (~) to specify to install the latest minor or patch version, respectively. 
+    -> npm i --package-lock-only (to get package-lock.json)
+    -> npm audit
+    -> npm audit fix (solving vulnerabilities by updating the package with in the allowed version range)
+    -> npm audit fix --force (solving vulnerabilities by updating the package without in the allowed version range)
+
+
+*) ES6 Import:
+    import name from 'module-name'
+
+    *)Importing can be done in various ways:
+
+        Importing an entire module: 
+        import * as name from 'module-name'
+
+        Import default export from a module:
+        import name from 'module-name'
+
+        Importing a single export from a module:
+        import { name } from 'module-name'
+
+        Importing multiple exports from a module:
+        import { nameOne , nameTwo } from 'module-name'
+        
+        Importing a module for side effects only
+        import './module-name'

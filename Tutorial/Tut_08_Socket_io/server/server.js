@@ -9,6 +9,22 @@
             -> but in case of socket io:
                 -> we are going to setting up something called a web socket and these web sockets are going to connect to the server but that connection stays open so if i make 10 request to the server through our websocket i only every make one connection because that connection stays open
                 -> this is very useful when we have to make a lot of request especially if tey're smaller requests
+
+      
+    => On ES6 module:
+      import { Server } from "socket.io";
+      import dotenv from "dotenv";
+      import express from "express";
+      import { createServer } from "http";
+      dotenv.config();
+      const PORT = process.env.PORT;
+      const app = express();
+      const server = createServer(app);
+      const io = new Server(server);
+
+      server.listen(PORT, () => {
+        console.log(`starting on ${PORT}`);
+      });
 */
 
 // in socket.io also have to admin UI:
