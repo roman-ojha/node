@@ -1,4 +1,5 @@
 *) Yarn:
+    -> https://classic.yarnpkg.com/en/docs/cli/install
     -> yarn install
         -> to install all dependencies
     -> yarn add <package_name>
@@ -7,6 +8,9 @@
         -> to start to project according to script on package.json
     -> yarn global add <package_name> 
         -> to install package globally
+    -> yarn remove <package_name>
+        -> to remove the package form the dependencies
+    -> yarn add -D <package_name> (to add package as dev dependencies)
 
 
 *) npm:
@@ -19,9 +23,6 @@
     -> npm list <package_name> (to know the specific latest version of an installed package)
     -> Prefix a version number with a caret (^) or a tilde (~) to specify to install the latest minor or patch version, respectively. 
     -> npm i --package-lock-only (to get package-lock.json)
-    -> npm audit
-    -> npm audit fix (solving vulnerabilities by updating the package with in the allowed version range)
-    -> npm audit fix --force (solving vulnerabilities by updating the package without in the allowed version range)
 
 
 *) ES6 Import:
@@ -43,3 +44,26 @@
         
         Importing a module for side effects only
         import './module-name'
+
+*) Npm Vulnerability:
+    -> npm audit
+    -> npm audit fix (solving vulnerabilities by updating the package with in the allowed version range)
+    -> npm audit fix --force (solving vulnerabilities by updating the package without in the allowed version range)
+    -> If it says required manual review then:
+        -> https://youtu.be/rXV6-eXB26s?t=420
+        -> https://snyk.io/advisor/
+
+
+*) NOTE Related To MongoDB
+    -> mongoose.schema.method.noteFunction = function(){
+            console.log(this.value);
+            // here we will only be able to get the 'value' data if we hadn't filtered the value while query
+    }
+    -> const getRes = await userData.findOne({
+        email: user.email
+        },
+        {
+            value:0,
+            // here we can see that we had filter the 'value' data, it means that now schema method will not be able to access this 'value' data
+        })
+    -> getRes.noteFunction();
