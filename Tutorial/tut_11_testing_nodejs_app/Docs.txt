@@ -1,0 +1,17 @@
+*) Overview:
+    -> Using:
+        -> Express
+        -> Jest (test runner)
+        -> supertest
+            -> using supertest it help to simulate calls with it as api consumer
+            -> https://github.com/visionmedia/supertest
+    -> We will try to implement test on 'Todo's' application
+    
+*) Setup to generator express app:
+    -> npm i -g express-generator
+    -> npm i -g express
+    -> express --no-view .
+    -> npm install
+    -> npm install -D jest supertest
+
+    => write script on package.json
