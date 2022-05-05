@@ -16,6 +16,7 @@ describe("Todos API", () => {
         expect(response.body).toEqual(
           expect.arrayContaining([
             expect.objectContaining({
+              id: expect.any(Number),
               name: expect.any(String),
               completed: expect.any(Boolean),
             }),
@@ -34,21 +35,41 @@ describe("Todos API", () => {
         .then((response) => {
           // and now here after getting response what we would expect
           expect(response.body).toEqual(
-            expect.arrayContaining([
-              expect.objectContaining({
-                name: expect.any(String),
-                completed: expect.any(Boolean),
-              }),
-            ])
+            expect.objectContaining({
+              name: expect.any(String),
+              completed: expect.any(Boolean),
+            })
           );
         })
     );
   });
   it("GET /todos/id --> 404 if not found", () => {
     //
+    return request(app).get("/todos/99999").expect(404);
+    // here we would want expect 404 error if we would pass some none exist id
   });
   it("POST /todos --> created todo", () => {
-    //
+    // now in this test we would like to create todo and request to the server and should get the response back
+    return request(app)
+      .post("/todos")
+      .send({
+        // send() is an request body
+        name: "go for walk",
+      })
+      .expect("Content-Type", /json/)
+      .expect(201)
+      .then((response) => {
+        expect(response.body).toEqual(
+          // now we would expect to get back this object
+          expect.objectContaining({
+            name: "go for walk",
+            completed: false,
+          })
+        );
+      });
   });
-  it("GET /todos --> validate request body", () => {});
+  it("POST /todos --> validate request body", () => {
+    // in this test we would like to test if user given a number then it should return 400||422 response
+    return request(app).post("/todos").send({ name: 123 }).expect(422);
+  });
 });

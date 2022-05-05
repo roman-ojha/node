@@ -1,0 +1,17 @@
+
+###
+GET http://localhost:8080/todos
+
+###
+
+POST /todos HTTP/1.1
+Host: localhost:8080
+Origin: http://localhost:3000
+Content-Type: application/json; charset=UTF-8
+
+{
+    "name":"to you work"
+}
+
+###
+GET http://localhost:8080/todos/9999
