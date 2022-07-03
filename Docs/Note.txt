@@ -23,6 +23,9 @@
     -> npm list <package_name> (to know the specific latest version of an installed package)
     -> Prefix a version number with a caret (^) or a tilde (~) to specify to install the latest minor or patch version, respectively. 
     -> npm i --package-lock-only (to get package-lock.json)
+    -> npm cache clean –force (to remove npm cache)
+    -> npm cache clean --force (if above clean cache don't work)
+    -> npm cache verify (to see/verify cache clean or not)
 
 
 *) ES6 Import:
