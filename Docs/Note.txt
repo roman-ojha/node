@@ -11,6 +11,7 @@
     -> yarn remove <package_name>
         -> to remove the package form the dependencies
     -> yarn add -D <package_name> (to add package as dev dependencies)
+    -> yarn run (to list all script to run)
 
 
 *) npm:
