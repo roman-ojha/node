@@ -1,3 +1,6 @@
 [submodule "Express"]
 	path = Express
 	url = https://github.com/Roman-Ojha/express
+[submodule "Tutorial/12_passport_js_auth"]
+	path = Tutorial/12_passport_js_auth
+	url = git@github.com:roman-ojha/express-passport-user-auth.git
