@@ -1,6 +1,9 @@
 [submodule "Express"]
 	path = Express
 	url = https://github.com/Roman-Ojha/express
-[submodule "Tutorial/12_passport_js_auth"]
-	path = Tutorial/12_passport_js_auth
+[submodule "Notes/12_passport_js_auth"]
+	path = Notes/12_passport_js_auth
 	url = git@github.com:roman-ojha/express-passport-user-auth.git
+[submodule "Notes/13_Create_own_NPM_Package"]
+	path = Notes/13_Create_own_NPM_Package
+	url = git@github.com:roman-ojha/roman-simple-math-npm-package-example.git
