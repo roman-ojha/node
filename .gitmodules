@@ -7,3 +7,6 @@
 [submodule "Notes/13_Create_own_NPM_Package"]
 	path = Notes/13_Create_own_NPM_Package
 	url = git@github.com:roman-ojha/roman-simple-math-npm-package-example.git
+[submodule "Notes/15_Household_Shopping_Microservice"]
+	path = Notes/15_Household_Shopping_Microservice
+	url = git@github.com:roman-ojha/household-shopping-microservice-nodejs.git
