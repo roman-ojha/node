@@ -1,0 +1,5 @@
+*) What we will learn?
+    -> How to add a Swagger UI to you ExpressJS API
+    -> How to export Swagger docs as JSON
+    -> How to use openapi to define your API documentation
+    -> How to import Swagger docs to Postman
