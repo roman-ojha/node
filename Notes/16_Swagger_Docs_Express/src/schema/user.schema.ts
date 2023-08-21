@@ -1,5 +1,6 @@
 import { object, string, TypeOf } from "zod";
 
+// Here we are defining the Schema that we can use on Response and Response Body in API Docs that we are defining in '../routes.ts'
 /**
  * @openapi
  * components:

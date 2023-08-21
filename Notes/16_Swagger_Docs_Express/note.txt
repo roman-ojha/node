@@ -3,3 +3,11 @@
     -> How to export Swagger docs as JSON
     -> How to use openapi to define your API documentation
     -> How to import Swagger docs to Postman
+    
+=> Init repo with cloned: https://github.com/TomDoesTech/REST-API-Tutorial-Updated.git
+=> After that we will create 'swagger.ts' file inside './src/utils/swagger.ts'
+=> Install These packages:
+    -> 'swagger-jsdoc' => Use to build out Swagger Documentation
+    -> 'swagger-ui-express' => Use to expose that documentation in an interface
+
+=> Here we are using OpenAPI and Standard language for HTTP APIs: https://www.openapis.org/

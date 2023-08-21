@@ -23,6 +23,33 @@ import { createSessionSchema } from "./schema/session.schema";
 import { createUserSchema } from "./schema/user.schema";
 
 function routes(app: Express) {
+  // Now here we will provide the documentation in Yaml Comment format
+  // *) Import Docs into postman
+  //     -> Just go to 'localhost:<port>/docs.json' as we define in './src/utils/swagger.ts' we will get the json format of docs which we can use to import inside postman
+  //     -> https://swagger.io/docs/specification/about/
+  /** Format
+   *
+   * <routes>:
+   * <method>:
+   *    tags: (Group the end point in documentation like: 'User' might have different endpoints)
+   *    summary: (Summary of the current endpoint)
+   *     parameters: (Parameter if it exist)
+   *      - name: <name_of_the_parameter>
+   *        in: <where_parameter_is_coming_from_ex:'path'>
+   *        description:
+   *        required: <bool>
+   *    requestBody:
+   *     required: <is_content_body_required?>
+   *     content:
+   *      <content_type>:
+   *          schema: (schema of type)
+   *             $ref: <reference_to_the_schema_that_we_define_inside_'./schema/*.ts'>
+   *
+   *    - <tag_name>
+   *    - description:
+   *    - response: (Provide different responses and it's description, content that it response)
+   */
+
   /**
    * @openapi
    * /healthcheck:
@@ -36,12 +63,19 @@ function routes(app: Express) {
    */
   app.get("/healthcheck", (req: Request, res: Response) => res.sendStatus(200));
 
+  // Defining Tags with it's description so that we can use it bellow
+  /**
+   * @openapi
+   * tags:
+   *   name: User
+   *   description: Api related to User
+   */
+
   /**
    * @openapi
    * '/api/users':
    *  post:
-   *     tags:
-   *     - User
+   *     tags: [User]
    *     summary: Register a user
    *     requestBody:
    *      required: true

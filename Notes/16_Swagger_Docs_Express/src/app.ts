@@ -42,5 +42,5 @@ app.listen(port, async () => {
 
   startMetricsServer();
 
-  swaggerDocs(app, port);
+  swaggerDocs(app, port); // using SwaggerDocs
 });
