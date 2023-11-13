@@ -32,6 +32,11 @@
     -> npm update <package_name> (to update specific package in current working project)
     -> npm update <package_name> -g (to update specific package globally)
     -> npm update (to update all outdated packages in current working project)
+    
+*) NVM-Windows: https://github.com/coreybutler/nvm-windows
+    -> nvm list (list out all of the node version available)
+    -> nvm install <version> (install new version into the system)
+    -> nvm use <version> (use different node version)
 
 
 *) ES6 Import:
