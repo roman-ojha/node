@@ -1,0 +1,7 @@
+*) 3 Layer approach
+    -> https://youtu.be/fc6o1gwqZuA?list=PL5Lsd0YA4OMGN86vWiW7O52izu-cTxcS3
+    -> './01_Application_workflow.png'
+    -> Purpose of controller is to receive the request and sending the response only, it's purpose is not to handle the business logic
+    -> Controller can only be use for validation
+    -> Controller forward the request to 'Service' for business logic and Service will directly not access the database rather it will access the 'Model' layer
+    -> now this 'Model' layer will have simple query attach to it which will going to do query to the database
