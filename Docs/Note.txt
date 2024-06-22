@@ -33,6 +33,10 @@
     -> npm update <package_name> -g (to update specific package globally)
     -> npm update (to update all outdated packages in current working project)
     
+*) Npx:
+    -> Run node_modules package without installing packages globally
+    -> npx <package_name> <command>
+    
 *) NVM-Windows: https://github.com/coreybutler/nvm-windows
     -> nvm list (list out all of the node version available)
     -> nvm install <version> (install new version into the system)
