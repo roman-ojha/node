@@ -36,11 +36,15 @@
 *) Npx:
     -> Run node_modules package without installing packages globally
     -> npx <package_name> <command>
+
+*) Node:
+    -> node --trace_gc index.js (trace garbage collecting)
     
 *) NVM-Windows: https://github.com/coreybutler/nvm-windows
     -> nvm list (list out all of the node version available)
     -> nvm install <version> (install new version into the system)
     -> nvm use <version> (use different node version)
+
 
 
 *) ES6 Import:
