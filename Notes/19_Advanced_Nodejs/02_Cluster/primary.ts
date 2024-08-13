@@ -2,8 +2,6 @@
 // https://nodejs.org/docs/v20.15.0/api/cluster.html
 import cluster from "node:cluster";
 import os from "os";
-import { dirname } from "path";
-import { fileURLToPath } from "node:url";
 
 const cupCount = os.cpus().length; // gives us to number of cpu that you have in your system
 console.log(`The total number of CPU: ${cupCount}`);
