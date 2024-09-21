@@ -19,3 +19,5 @@ app.listen(port, () => {
 
 // Test the load:  npx loadtest -n <number_of_request> -c <number_of_concurrent_request> -k <url>
 // Example: npx loadtest -n 1200 -c 400 -k http://localhost:3000/heavy
+// Example: npx loadtest -c 40 --rps 1200 -k http://127.0.0.1:8080/v1/user/category/popular
+// --rps = requests per second

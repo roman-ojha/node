@@ -33,6 +33,11 @@
     -> npm update <package_name> -g (to update specific package globally)
     -> npm update (to update all outdated packages in current working project)
     
+*) Load Test
+    -> npx loadtest -n <number_of_request> -c <number_of_concurrent_request> -k <url>
+    -> npx loadtest -n 1200 -c 400 -k http://localhost:3000/heavy
+    -> npx loadtest -c 40 --rps 1200 -k http://127.0.0.1:8080/v1/user/category/popular
+    
 *) Npx:
     -> Run node_modules package without installing packages globally
     -> npx <package_name> <command>
